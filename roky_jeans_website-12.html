@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>ROKY JEANS | Denim for Everyone</title>
+<style>
+:root{--navy:#101827;--blue:#1e40af;--gold:#f5c451;--cream:#f8fafc;--green:#16a34a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6f9;color:#172033}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:5;box-shadow:0 3px 14px #0002}
+.nav{max-width:1100px;margin:auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-size:1.55rem;font-weight:900;letter-spacing:1px}.logo span{color:var(--gold)}
+nav{display:flex;gap:16px;flex-wrap:wrap}nav a{color:white;text-decoration:none;font-weight:700;font-size:.92rem}
+.hero{background:linear-gradient(110deg,#101827f2,#1e3a5ff0),url('https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1600&q=85') center/cover;color:white;padding:66px 20px}
+.hero-inner{max-width:1100px;margin:auto}.eyebrow{color:var(--gold);font-weight:bold;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(2.3rem,7vw,4.8rem);line-height:1.02;margin:14px 0}.hero p{font-size:1.08rem;max-width:520px;line-height:1.6;color:#e5e7eb}
+.btn{display:inline-block;background:var(--gold);color:#101827;text-decoration:none;border:0;border-radius:999px;padding:13px 20px;font-weight:800;cursor:pointer}
+section{max-width:1100px;margin:auto;padding:38px 18px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+h2{margin:0;font-size:clamp(1.6rem,4vw,2.2rem)}.sub{color:#64748b;margin:7px 0 0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid #cbd5e1;border-radius:99px;padding:9px 14px;background:white;cursor:pointer;font-weight:700}.filter.active{background:var(--navy);color:white;border-color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 5px 18px #0f172a0d;border:1px solid #e2e8f0}
+.card img{width:100%;height:210px;object-fit:cover;background:#e2e8f0;display:block}
+.card-content{padding:14px}.tag{font-size:.74rem;font-weight:800;color:#1d4ed8;background:#dbeafe;border-radius:6px;padding:5px 7px;display:inline-block}
+.card h3{font-size:1rem;margin:10px 0 6px}.price{font-size:1.35rem;font-weight:900;color:#0f172a}.sizes{font-size:.83rem;color:#64748b;margin:7px 0 12px;line-height:1.5}
+.order{display:block;text-align:center;background:var(--green);color:white;text-decoration:none;font-weight:800;border-radius:9px;padding:11px 8px;font-size:.9rem}
+.note{background:#fff7db;border:1px solid #f5d77b;padding:13px 15px;border-radius:12px;font-size:.9rem;line-height:1.5;margin-top:20px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{background:white;border-radius:14px;padding:18px;border:1px solid #e2e8f0}.feature b{display:block;margin:8px 0}
+.contact{background:var(--navy);color:white;border-radius:20px;padding:26px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.contact p{color:#cbd5e1;line-height:1.5}
+footer{text-align:center;background:#0b1220;color:#cbd5e1;padding:22px 14px;font-size:.85rem}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card img{height:190px}.hero{padding:52px 18px}.features{grid-template-columns:1fr}}
+@media(max-width:420px){.nav{align-items:flex-start;flex-direction:column}.grid{gap:10px}.card img{height:155px}.card-content{padding:10px}.card h3{font-size:.92rem}.price{font-size:1.2rem}nav{gap:13px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">ROKY <span>JEANS</span></div>
+    <nav><a href="#home">Home</a><a href="#products">Jeans</a><a href="#about">Why Us</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+<main>
+  <div class="hero" id="home">
+    <div class="hero-inner">
+      <div class="eyebrow">Everyday Denim • Great Prices</div>
+      <h1>Find Your<br><span style="color:var(--gold)">Perfect Jeans.</span></h1>
+      <p>Men, Women aur Kids ke liye stylish denim jeans. Apni pasand chuno aur WhatsApp par order bhejo.</p>
+      <a class="btn" href="#products">JEANS DEKHO ↓</a>
+    </div>
+  </div>
+  <section id="products">
+    <div class="section-head"><div><h2>Our Jeans Collection</h2><p class="sub">Har jeans ₹350 se ₹450 ke beech</p></div></div>
+    <div class="filters">
+      <button class="filter active" data-filter="All">All Jeans</button>
+      <button class="filter" data-filter="Men">Men</button>
+      <button class="filter" data-filter="Women">Women</button>
+      <button class="filter" data-filter="Kids">Kids</button>
+    </div>
+    <div class="grid" id="productGrid">
+      <article class="card" data-category="Men">
+        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85" alt="Blue denim jeans" loading="lazy">
+        <div class="card-content"><span class="tag">MEN</span><h3>Men's Slim Fit Jeans</h3><div class="price">₹399</div><div class="sizes">Sizes: 28, 30, 32, 34, 36<br>Colour: Blue</div><a class="order" target="_blank" rel="noopener" href="#" data-product="Men's Slim Fit Jeans" data-price="399">🟢 WhatsApp Order</a></div>
+      </article>
+      <article class="card" data-category="Men">
+        <img src="https://images.unsplash.com/photo-1511196044526-5cb3bcb7071b?auto=format&fit=crop&w=700&q=85" alt="Denim jeans style" loading="lazy">
+        <div class="card-content"><span class="tag">MEN</span><h3>Men's Casual Jeans</h3><div class="price">₹450</div><div class="sizes">Sizes: 28, 30, 32, 34, 36<br>Colour: Dark Blue</div><a class="order" target="_blank" rel="noopener" href="#" data-product="Men's Casual Jeans" data-price="450">🟢 WhatsApp Order</a></div>
+      </article>
+      <article class="card" data-category="Women">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=85" alt="Women's denim jeans" loading="lazy">
+        <div class="card-content"><span class="tag">WOMEN</span><h3>Women's Straight Fit Jeans</h3><div class="price">₹399</div><div class="sizes">Sizes: 26, 28, 30, 32, 34<br>Colour: Blue</div><a class="order" target="_blank" rel="noopener" href="#" data-product="Women's Straight Fit Jeans" data-price="399">🟢 WhatsApp Order</a></div>
+      </article>
+      <article class="card" data-category="Women">
+        <img src="https://images.unsplash.com/photo-1582418702059-97eb6f0c2c5d?auto=format&fit=crop&w=700&q=85" alt="Women's casual denim" loading="lazy">
+        <div class="card-content"><span class="tag">WOMEN</span><h3>Women's Wide Leg Jeans</h3><div class="price">₹450</div><div class="sizes">Sizes: 26, 28, 30, 32, 34<br>Colour: Light Blue</div><a class="order" target="_blank" rel="noopener" href="#" data-product="Women's Wide Leg Jeans" data-price="450">🟢 WhatsApp Order</a></div>
+      </article>
+      <article class="card" data-category="Kids">
+        <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=85" alt="Kids fashion" loading="lazy">
+        <div class="card-content"><span class="tag">KIDS</span><h3>Kids' Denim Jeans</h3><div class="price">₹350</div><div class="sizes">Sizes: Stock ke hisaab se<br>Colour: Blue</div><a class="order" target="_blank" rel="noopener" href="#" data-product="Kids' Denim Jeans" data-price="350">🟢 WhatsApp Order</a></div>
+      </article>
+      <article class="card" data-category="Kids">
+        <img src="https://images.unsplash.com/photo-1503919005314-30d93d07d823?auto=format&fit=crop&w=700&q=85" alt="Children's clothing" loading="lazy">
+        <div class="card-content"><span class="tag">KIDS</span><h3>Kids' Everyday Jeans</h3><div class="price">₹399</div><div class="sizes">Sizes: Stock ke hisaab se<br>Colour: Dark Blue</div><a class="order" target="_blank" rel="noopener" href="#" data-product="Kids' Everyday Jeans" data-price="399">🟢 WhatsApp Order</a></div>
+      </article>
+    </div>
+    <div class="note"><b>Note:</b> Prices aur sizes demo ke liye hain. Website public karne se pehle apne actual stock, photos aur sizes ke hisaab se update karein.</div>
+  </section>
+  <section id="about">
+    <div class="section-head"><div><h2>Why ROKY JEANS?</h2><p class="sub">Simple shopping, seedha WhatsApp par.</p></div></div>
+    <div class="features">
+      <div class="feature"><div style="font-size:1.7rem">👖</div><b>Jeans for Everyone</b><span>Men, Women aur Kids ki collection.</span></div>
+      <div class="feature"><div style="font-size:1.7rem">💸</div><b>Budget Friendly</b><span>Listed sample prices ₹350–₹450.</span></div>
+      <div class="feature"><div style="font-size:1.7rem">📲</div><b>Easy WhatsApp Order</b><span>Product details ke saath message bhejein.</span></div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="contact">
+      <div><h2>Order your jeans today</h2><p>Size aur availability confirm karne ke liye WhatsApp par message karein.</p></div>
+      <a class="btn" style="background:#22c55e;color:white" href="https://wa.me/917823053546?text=Namaste%20ROKY%20JEANS%2C%20mujhe%20jeans%20order%20karni%20hai." target="_blank" rel="noopener">WhatsApp par Contact</a>
+    </div>
+  </section>
+</main>
+<footer>© <span id="year"></span> ROKY JEANS • Denim for Everyone</footer>
+<script>
+const phone = "917823053546";
+document.querySelectorAll(".order").forEach(link => {
+  const product = link.dataset.product;
+  const price = link.dataset.price;
+  const message = `Namaste ROKY JEANS! Mujhe jeans order karni hai.%0AProduct: ${encodeURIComponent(product)}%0APrice: ₹${price}%0ASize: %0AQuantity: 1`;
+  link.href = `https://wa.me/${phone}?text=${message}`;
+});
+document.querySelectorAll(".filter").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+    button.classList.add("active");
+    const selected = button.dataset.filter;
+    document.querySelectorAll(".card").forEach(card => {
+      card.style.display = selected === "All" || card.dataset.category === selected ? "" : "none";
+    });
+  });
+});
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
